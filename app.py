@@ -1,7 +1,7 @@
 import streamlit as st
 from sympy import symbols, integrate, latex
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Define the functions
 x = symbols('x')
@@ -38,16 +38,16 @@ def main():
     st.latex(f"Selected function: {latex(functions[selected_function])}")
 
     # Plot the function with the integral area
-    x_vals = np.linspace(left_bound, right_bound, 100)
-    y_vals = [functions[selected_function].subs(x, val) for val in x_vals]
+    #x_vals = np.linspace(left_bound, right_bound, 100)
+    #y_vals = [functions[selected_function].subs(x, val) for val in x_vals]
 
-    plt.plot(x_vals, y_vals, label=selected_function)
-    plt.fill_between(x_vals, y_vals, 0, where=(x_vals >= left_bound) & (x_vals <= right_bound), alpha=0.3)
+    #plt.plot(x_vals, y_vals, label=selected_function)
+    #plt.fill_between(x_vals, y_vals, 0, where=(x_vals >= left_bound) & (x_vals <= right_bound), alpha=0.3)
 
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.legend()
-    st.pyplot()
+    #plt.xlabel('x')
+    #plt.ylabel('y')
+    #plt.legend()
+    #st.pyplot()
 
     # Display the result
     st.write(f"The integral of {selected_function} from {left_bound} to {right_bound} is: {integral}")
