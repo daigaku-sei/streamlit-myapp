@@ -7,13 +7,13 @@ import numpy as np
 x = symbols('x')
 
 functions = {
-    'у = х': x,
-    'у = х в квадрате': x**2,
-    'некая кубическая функция': 2*x**3-7*x+4
+    '/': x,
+    'U': x**2,
+    '2*x**3-7*x+4': 2*x**3-7*x+4
 }
 
 def main():
-    st.title("Integral Solver")
+    st.title("Интегрируем")
 
     # Create a container to center-align the widgets
     container = st.container()
@@ -36,7 +36,7 @@ def main():
     integral = integrate(functions[selected_function], (x, left_bound, right_bound))
 
     # Display the LaTeX name of the function
-    st.latex(f"Selected function: {latex(functions[selected_function])}")
+    st.latex(f"Выбрана: {latex(functions[selected_function])}")
 
     # Plot the function with the integral area
     #x_vals = np.linspace(left_bound, right_bound, 100)
@@ -51,7 +51,7 @@ def main():
     #st.pyplot()
 
     # Display the result
-    st.write(f"The integral of {selected_function} from {left_bound} to {right_bound} is: {integral}")
+    st.write(f"Интеграл {latex(functions[selected_function])} от {left_bound} до {right_bound}: {integral}")
 
 if __name__ == "__main__":
     main()
