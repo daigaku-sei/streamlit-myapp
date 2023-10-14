@@ -51,7 +51,7 @@ def main():
     #st.pyplot()
 
     # Display the result
-    st.write(f"Интеграл {latex(functions[selected_function])} от {left_bound} до {right_bound}: {integral}")
+    st.write(f"Интеграл: {integral}")
 
 if __name__ == "__main__":
     main()
