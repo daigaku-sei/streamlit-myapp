@@ -9,9 +9,9 @@ f1 = st.latex(f"Selected function: {latex( x )}")
 f2 = st.latex(f"Selected function: {latex( x**3 )}")
 f3 = st.latex(f"Selected function: {latex( 2*x**3-7*x+4 )}")
 functions = {
-    f1: x**2,
-    f2: 2*x**3-7*x+4,
-    f3: x**4
+   st.latex(f"Selected function: {latex( x )}"): x**2,
+    st.latex(f"Selected function: {latex( x )}"): 2*x**3-7*x+4,
+    st.latex(f"Selected function: {latex( x )}"): x**4
 }
 
 def main():
