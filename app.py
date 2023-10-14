@@ -7,7 +7,7 @@ import numpy as np
 x = symbols('x')
 functions = {
     'Function 1': x**2,
-    'Function 2': 2*x**3-7*x+4,
+    f'latex(2*x**3-7*x+4)': 2*x**3-7*x+4,
     'Function 3': x**4
 }
 
