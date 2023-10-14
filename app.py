@@ -29,7 +29,7 @@ def main():
         right_bound = st.number_input("Enter the right bound", value=1.0)
 
     # Steps selection
-    steps = st.number_input("Enter the number of steps", value=100)
+    #steps = st.number_input("Enter the number of steps", value=100)
 
     # Calculate the integral
     integral = integrate(functions[selected_function], (x, left_bound, right_bound))
