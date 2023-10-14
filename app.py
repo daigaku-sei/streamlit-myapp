@@ -15,8 +15,8 @@ def main():
     st.title("Integral Solver")
 
     # Create a container to center-align the widgets
-    container = st.beta_container()
-    col1, col2, col3 = container.beta_columns(3)
+    container = st.container()
+    col1, col2, col3 = container.columns(3)
 
     # Function selection
     with col1:
