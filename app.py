@@ -5,13 +5,11 @@ import numpy as np
 
 # Define the functions
 x = symbols('x')
-f1 = st.latex(f"Selected function: {latex( x )}")
-f2 = st.latex(f"Selected function: {latex( x**3 )}")
-f3 = st.latex(f"Selected function: {latex( 2*x**3-7*x+4 )}")
+
 functions = {
-   st.latex(f"Selected function: {latex( x )}"): x**2,
-    st.latex(f"Selected function: {latex( x )}"): 2*x**3-7*x+4,
-    st.latex(f"Selected function: {latex( x )}"): x**4
+    'у = х': x,
+    'у = х в квадрате': x**2,
+    'некая кубическая функция': 2*x**3-7*x+4
 }
 
 def main():
