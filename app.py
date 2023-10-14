@@ -78,4 +78,4 @@ app_layout = pn.Column(
 
 # Serve the app
 app_layout.servable(title='Простой расчет интеграла')
-pn.serve_as_panel_app(app)
+#pn.serve_as_panel_app(app)
