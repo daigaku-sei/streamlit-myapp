@@ -21,13 +21,13 @@ def main():
 
     # Function selection
     with col1:
-        selected_function = st.selectbox("Select a function", list(functions.keys()))
+        selected_function = st.selectbox("Выбор функции", list(functions.keys()))
 
     # Bounds selection
     with col2:
-        left_bound = st.number_input("Enter the left bound", value=0.0)
+        left_bound = st.number_input("Левая граница", value=0.0)
     with col3:
-        right_bound = st.number_input("Enter the right bound", value=1.0)
+        right_bound = st.number_input("Правая граница", value=1.0)
 
     # Steps selection
     #steps = st.number_input("Enter the number of steps", value=100)
