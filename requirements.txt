@@ -2,3 +2,5 @@ streamlit
 panel
 matplotlib
 numpy
+altair
+pandas
