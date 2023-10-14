@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import panel as pn
+import streamlit as st
 import numpy as np
 
 # Define the function to integrate
