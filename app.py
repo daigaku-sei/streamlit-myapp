@@ -51,7 +51,7 @@ def main():
     #st.pyplot()
 
     # Display the result
-    st.write(f"Интеграл: {integral}")
+    st.write(f"Интеграл найден! Он равен {integral}")
 
 if __name__ == "__main__":
     main()
