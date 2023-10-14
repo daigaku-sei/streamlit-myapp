@@ -5,10 +5,13 @@ import numpy as np
 
 # Define the functions
 x = symbols('x')
+f1 = st.latex(f"Selected function: {latex( x )}")
+f2 = st.latex(f"Selected function: {latex( x**3 )}")
+f3 = st.latex(f"Selected function: {latex( 2*x**3-7*x+4 )}")
 functions = {
-    'Function 1': x**2,
-    f'{latex(2*x**3-7*x+4)}': 2*x**3-7*x+4,
-    'Function 3': x**4
+    f1: x**2,
+    f2: 2*x**3-7*x+4,
+    f3: x**4
 }
 
 def main():
