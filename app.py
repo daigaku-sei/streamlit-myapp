@@ -13,6 +13,7 @@ functions = {
     latex(x**2): x**2,
     latex(2*x**3-7*x+4): 2*x**3-7*x+4,
     latex(exp(x)): exp(x)  # e**x
+    latex(sin(pi*x)): sin(pi*x)  # sin(pi*x)
 }
 
 def main():
