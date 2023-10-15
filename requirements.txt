@@ -4,5 +4,5 @@ numpy
 altair
 pandas
 sympy
-matplotlib==3.4.3
-miktex==21.8
+matplotlib
+miktex
