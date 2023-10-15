@@ -27,7 +27,10 @@ def main():
             custom_function = st.text_input("Введите свою функцию", value="x")
             selected_function = custom_function
 
-        st.latex(f"f(x) = {latex(functions[selected_function])}")
+        if selected_function in functions:
+            st.latex(f"f(x) = {latex(functions[selected_function])}")
+        else:
+            st.latex(f"f(x) = {selected_function}")
 
     # Bounds selection
     with col2:
@@ -36,10 +39,16 @@ def main():
         right_bound = st.number_input("Правая граница", value=1.0)
 
     # Calculate the integral
-    integral = integrate(functions[selected_function], (x, left_bound, right_bound))
+    if selected_function in functions:
+        integral = integrate(functions[selected_function], (x, left_bound, right_bound))
+    else:
+        integral = integrate(selected_function, (x, left_bound, right_bound))
 
     # Display the LaTeX name of the function
-    st.latex(f"Выбрана: {latex(functions[selected_function])}")
+    if selected_function in functions:
+        st.latex(f"Выбрана: {latex(functions[selected_function])}")
+    else:
+        st.latex(f"Выбрана: {selected_function}")
 
     # Display the result
     st.write(f"Интеграл найден! Он равен {integral:.4f}")
