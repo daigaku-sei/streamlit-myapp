@@ -1,6 +1,4 @@
 import streamlit as st
-import matplotlib
-matplotlib.use('Agg')  # Set the backend to use LaTeX rendering
 import matplotlib.pyplot as plt
 import numpy as np
 from sympy import symbols, sympify, integrate, latex, exp, sin, cos, pi
@@ -72,16 +70,13 @@ def main():
 
     # Plot the function
     fig, ax = plt.subplots()
-    label = r'$f(x) = {}$'.format(latex(functions[selected_function]))
-    ax.plot(x_vals, y_vals, label=label)
+    ax.plot(x_vals, y_vals, label=f"f(x) = {latex(functions[selected_function])}")
     ax.axvline(left_bound, color='red', linestyle='--', label=f'a={left_bound}')
     ax.axvline(right_bound, color='green', linestyle='--', label=f'b={right_bound}')
     ax.legend()
     ax.set_xlabel("x")
     ax.set_ylabel("f(x)")
     ax.set_title("График функции по границам интегрирования")
-    
-    plt.rcParams['text.usetex'] = True  # Enable LaTeX rendering
     st.pyplot(fig)
 
 if __name__ == "__main__":
