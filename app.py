@@ -18,7 +18,7 @@ def main():
     col1, col2, col3 = container.columns(3)
 
     # Function selection
-   with col1:
+    with col1:
         function_type = st.radio("Выбор функции", ("Выбрать из списка", "Ввести свою функцию"))
 
         if function_type == "Выбрать из списка":
