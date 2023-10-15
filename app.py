@@ -1,7 +1,6 @@
 import streamlit as st
 from sympy import symbols, integrate, latex
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Define the functions
 x = symbols('x')
@@ -35,19 +34,6 @@ def main():
 
     # Display the LaTeX name of the function
     st.latex(f"Выбрана: {latex(functions[selected_function])}")
-
-    # Button for drawing the function with integral area
-    if st.button("Нарисовать график"):
-        x_vals = np.linspace(left_bound, right_bound, 100)
-        y_vals = [functions[selected_function].subs(x, val) for val in x_vals]
-
-        plt.plot(x_vals, y_vals, label=selected_function)
-        plt.fill_between(x_vals, y_vals, 0, where=(x_vals >= left_bound) & (x_vals <= right_bound), alpha=0.3)
-
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.legend()
-        st.pyplot()
 
     # Display the result
     st.write(f"Интеграл найден! Он равен {integral:.4f}")
