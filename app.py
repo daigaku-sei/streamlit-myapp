@@ -78,7 +78,5 @@ def main():
     ax.set_title("График функции по границам интегрирования")
     st.pyplot(fig)
 
-    st.image('mylogo.ico')
-
 if __name__ == "__main__":
     main()
