@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-from sympy import symbols, sympify, integrate, latex
+from sympy import symbols, sympify, integrate, latex, exp
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -11,7 +11,8 @@ x = symbols('x')
 functions = {
     latex(x): x,
     latex(x**2): x**2,
-    latex(2*x**3-7*x+4): 2*x**3-7*x+4
+    latex(2*x**3-7*x+4): 2*x**3-7*x+4,
+    latex(exp(x)): exp(x)  # e**x
 }
 
 def main():
