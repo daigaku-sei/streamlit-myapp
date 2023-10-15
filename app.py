@@ -27,8 +27,9 @@ def main():
             custom_function = st.text_input("Введите свою функцию", value="x")
             selected_function = custom_function
 
-            # Add custom function to the functions dictionary
-            functions[selected_function] = selected_function
+            # Add custom function to the functions dictionary if it's not already there
+            if selected_function not in functions:
+                functions[selected_function] = selected_function
 
         st.latex(f"f(x) = {latex(functions[selected_function])}")
 
