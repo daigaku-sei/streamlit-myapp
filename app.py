@@ -21,7 +21,7 @@ def main():
 
     # Function selection
     with col1:
-        selected_function = st.selectbox("Выбор функции", list(functions.keys()))
+        selected_function = st.selectbox("Выбор функции", list(functions.keys()),format_func=lambda func: func)
         st.latex(f"f(x) = {latex(functions[selected_function])}")
 
     # Bounds selection
