@@ -71,7 +71,7 @@ def main():
     ax.plot(x_vals, y_vals, label=f"f(x) = {latex(functions[selected_function])}")
     x_vals = np.linspace(left_bound, right_bound, 100)
     y_vals = [functions[selected_function].subs(x, val) for val in x_vals]
-    y_vals = np.where(np.isfinite(y_vals), y_vals, 0.0)
+    y_vals = np.where(np.isnan(y_vals), np.nan, y_vals)
     ax.fill_between(x_vals, y_vals, where=(x_vals >= left_bound) & (x_vals <= right_bound), alpha=0.3)
     ax.legend()
     ax.set_xlabel("x")
