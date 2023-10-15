@@ -16,7 +16,7 @@ functions = {
 }
 
 def main():
-    st.title("Интегрируем v0.325.alpha")
+    st.title("Интегрируем")
 
     # Create a container to center-align the widgets
     container = st.container()
@@ -77,6 +77,6 @@ def main():
     ax.set_ylabel("f(x)")
     ax.set_title("График функции внутри границ интегрирования")
     st.pyplot(fig)
-
+    st.write("2023, R")
 if __name__ == "__main__":
     main()
