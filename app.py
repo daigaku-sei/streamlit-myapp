@@ -77,6 +77,5 @@ def main():
     ax.set_ylabel("f(x)")
     ax.set_title("График функции внутри границ интегрирования")
     st.pyplot(fig)
-    st.write(latex('2023, R'))
 if __name__ == "__main__":
     main()
