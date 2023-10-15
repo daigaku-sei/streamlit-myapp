@@ -4,7 +4,6 @@ import numpy as np
 from sympy import symbols, sympify, integrate, latex, exp, sin, cos, pi
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.image('mylogo.ico', use_column_width=True)
 # Define the functions
 x = symbols('x')
 
@@ -78,6 +77,8 @@ def main():
     ax.set_ylabel("f(x)")
     ax.set_title("График функции по границам интегрирования")
     st.pyplot(fig)
+
+    st.image('mylogo.ico')
 
 if __name__ == "__main__":
     main()
