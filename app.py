@@ -16,7 +16,7 @@ functions = {
 }
 
 def main():
-    st.title("Интегрируем")
+    st.title(r"Интегрируем v325\alpha")
 
     # Create a container to center-align the widgets
     container = st.container()
