@@ -75,7 +75,7 @@ def main():
     ax.legend()
     ax.set_xlabel("x")
     ax.set_ylabel("f(x)")
-    ax.set_title("График функции по границам интегрирования")
+    ax.set_title("График функции внутри границ интегрирования")
     st.pyplot(fig)
 
 if __name__ == "__main__":
