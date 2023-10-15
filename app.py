@@ -1,6 +1,5 @@
 import streamlit as st
 from sympy import symbols, integrate, latex
-import numpy as np
 
 # Define the functions
 x = symbols('x')
@@ -20,7 +19,14 @@ def main():
 
     # Function selection
     with col1:
-        selected_function = st.selectbox("Выбор функции", list(functions.keys()), format_func=lambda func: func)
+        function_type = st.radio("Выбор функции", ("Выбрать из списка", "Ввести свою функцию"))
+
+        if function_type == "Выбрать из списка":
+            selected_function = st.selectbox("Выберите функцию", list(functions.keys()), format_func=lambda func: func)
+        else:
+            custom_function = st.text_input("Введите свою функцию", value="x")
+            selected_function = custom_function
+
         st.latex(f"f(x) = {latex(functions[selected_function])}")
 
     # Bounds selection
