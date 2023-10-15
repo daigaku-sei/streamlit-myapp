@@ -7,9 +7,9 @@ import numpy as np
 x = symbols('x')
 
 functions = {
-    '/': x,
-    'U': x**2,
-    '2*x**3-7*x+4': 2*x**3-7*x+4
+    latex(x): x,
+    latex(x**2): x**2,
+    latex(2*x**3-7*x+4): 2*x**3-7*x+4
 }
 
 def main():
