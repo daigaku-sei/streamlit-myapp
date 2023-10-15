@@ -18,7 +18,7 @@ def main():
     col1, col2, col3 = container.columns(3)
 
     # Function selection
-    with col1:
+   with col1:
         function_type = st.radio("Выбор функции", ("Выбрать из списка", "Ввести свою функцию"))
 
         if function_type == "Выбрать из списка":
@@ -27,10 +27,11 @@ def main():
             custom_function = st.text_input("Введите свою функцию", value="x")
             selected_function = custom_function
 
-        if selected_function in functions:
-            st.latex(f"f(x) = {latex(functions[selected_function])}")
-        else:
-            st.latex(f"f(x) = {selected_function}")
+            # Add custom function to the functions dictionary
+            functions[selected_function] = selected_function
+
+        st.latex(f"f(x) = {latex(functions[selected_function])}")
+
 
     # Bounds selection
     with col2:
