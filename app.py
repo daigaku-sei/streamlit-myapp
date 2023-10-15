@@ -1,4 +1,6 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 from sympy import symbols, sympify, integrate, latex
 
 # Define the functions
@@ -33,7 +35,6 @@ def main():
 
         st.latex(f"f(x) = {latex(functions[selected_function])}")
 
-
     # Bounds selection
     with col2:
         left_bound = st.number_input("Левая граница", value=0.0)
@@ -54,6 +55,24 @@ def main():
 
     # Display the result
     st.write(f"Интеграл найден! Он равен {integral:.4f}")
+
+    # Generate x values for plotting
+    x_vals = np.linspace(left_bound, right_bound, 100)
+    # Generate y values by evaluating the selected function at x values
+    if selected_function in functions:
+        y_vals = [functions[selected_function].subs(x, val) for val in x_vals]
+    else:
+        y_vals = [sympify(selected_function).subs(x, val) for val in x_vals]
+
+    # Plot the function
+    fig, ax = plt.subplots()
+    ax.plot(x_vals, y_vals, label=f"f(x) = {latex(functions[selected_function])}")
+    ax.fill_between(x_vals, y_vals, where=(x_vals >= left_bound) & (x_vals <= right_bound), alpha=0.3)
+    ax.legend()
+    ax.set_xlabel("x")
+    ax.set_ylabel("f(x)")
+    ax.set_title("График функции и область под интегралом")
+    st.pyplot(fig)
 
 if __name__ == "__main__":
     main()
