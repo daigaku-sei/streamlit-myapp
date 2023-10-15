@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-from sympy import symbols, sympify, integrate, latex, exp
+from sympy import symbols, sympify, integrate, latex, exp, sin, cos, pi
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
