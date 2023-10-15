@@ -1,5 +1,5 @@
 import streamlit as st
-from sympy import symbols, integrate, latex
+from sympy import symbols, sympify, integrate, latex
 
 # Define the functions
 x = symbols('x')
@@ -29,7 +29,7 @@ def main():
 
             # Add custom function to the functions dictionary if it's not already there
             if selected_function not in functions:
-                functions[selected_function] = selected_function
+                functions[selected_function] = sympify(selected_function)
 
         st.latex(f"f(x) = {latex(functions[selected_function])}")
 
