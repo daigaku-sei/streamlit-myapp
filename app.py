@@ -4,7 +4,7 @@ import numpy as np
 from sympy import symbols, sympify, integrate, latex, exp, sin, cos, pi
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
+st.image('mylogo.ico', use_column_width=True)
 # Define the functions
 x = symbols('x')
 
