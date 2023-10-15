@@ -70,7 +70,7 @@ def main():
 
     # Plot the function
     fig, ax = plt.subplots()
-    ax.plot(x_vals, y_vals, label=f"f(x) = {latex(functions[selected_function])}")
+    ax.plot(x_vals, y_vals, label=f"f(x) = {functions[selected_function]}")
     ax.axvline(left_bound, color='red', linestyle='--', label=f'a={left_bound}')
     ax.axvline(right_bound, color='green', linestyle='--', label=f'b={right_bound}')
     ax.legend()
