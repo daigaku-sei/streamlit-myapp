@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sympy import symbols, sympify, integrate, latex
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Define the functions
 x = symbols('x')
 
