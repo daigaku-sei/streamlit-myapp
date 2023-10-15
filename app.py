@@ -7,9 +7,9 @@ import numpy as np
 x = symbols('x')
 
 functions = {
-    '/': x,
-    'U': x**2,
-    '2*x**3-7*x+4': 2*x**3-7*x+4
+    r'/': x,
+    r'U': x**2,
+    r'2*x**3-7*x+4': 2*x**3-7*x+4
 }
 
 def main():
@@ -21,7 +21,7 @@ def main():
 
     # Function selection
     with col1:
-        selected_function = st.selectbox("Выбор функции", list(functions.keys()))
+        selected_function = st.selectbox("Выбор функции", list(functions.keys()),format_func=lambda name: sp.latex(functions[name]))
 
     # Bounds selection
     with col2:
