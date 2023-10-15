@@ -71,8 +71,8 @@ def main():
     # Plot the function
     fig, ax = plt.subplots()
     ax.plot(x_vals, y_vals, label=f"f(x) = {latex(functions[selected_function])}")
-    ax.axvline(left_bound, color='red', linestyle='--', label='Left Bound')
-    ax.axvline(right_bound, color='green', linestyle='--', label='Right Bound')
+    ax.axvline(left_bound, color='red', linestyle='--', label='a')
+    ax.axvline(right_bound, color='green', linestyle='--', label='b')
     ax.legend()
     ax.set_xlabel("x")
     ax.set_ylabel("f(x)")
