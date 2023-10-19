@@ -62,9 +62,9 @@ def main():
         integral = integrate(functions[selected_function], (x, left_bound, right_bound))
     else:
         integral = integrate(selected_function, (x, left_bound, right_bound))
-    if left_bound > rightbound:
+    if left_bound > right_bound:
         st.write("Левая граница (как правило) меньше!")
-    elif left_bound == rightboud:
+    elif left_bound == right_bound:
         st.write("Границы (как правило) не равны!")
     # Display the LaTeX name of the function
     if selected_function in functions:
