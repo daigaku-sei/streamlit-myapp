@@ -29,6 +29,7 @@ def main():
         visibility: hidden;
     }
     footer:after{
+        visibility: visible;
         Content:"Demo for ikt_PRO. Copyright @ 2023";
         display: block;
         position: relative;
