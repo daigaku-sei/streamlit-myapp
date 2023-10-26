@@ -18,7 +18,7 @@ functions = {
 def main():
     hide_menu = """
     <style>
-    #stToolbar {
+    #MainMenu {
         visibility: hidden;
     }
     
