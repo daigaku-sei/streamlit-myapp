@@ -16,6 +16,15 @@ functions = {
 }
 
 def main():
+    hide_github_button = """
+    <style>
+    .css-1v3fvcr.e1q3nk1v0 {
+        visibility: hidden;
+    }
+    </style>
+    """
+    st.markdown(hide_github_button, unsafe_allow_html=True)
+    
     st.title("Интегрируем")
 
     # Create a container to center-align the widgets
@@ -80,6 +89,5 @@ def main():
     ax.set_ylabel("f(x)")
     ax.set_title("График функции внутри границ интегрирования")
     st.pyplot(fig)
-    st.image("toicon.png")
 if __name__ == "__main__":
     main()
