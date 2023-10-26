@@ -26,7 +26,7 @@ def main():
     }
     
     footer {
-        visibility: visible;
+        visibility: hidden;
     }
     footer:after{
         Content:"Demo for ikt_PRO. Copyright @ 2023";
@@ -35,7 +35,7 @@ def main():
         padding: 5px;
         top:3px;
         color: tomato;
-        align: left;
+        text-align: left;
     </style>
     """
     st.markdown(hide_menu, unsafe_allow_html=True)
