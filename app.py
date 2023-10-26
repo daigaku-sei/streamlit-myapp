@@ -16,14 +16,22 @@ functions = {
 }
 
 def main():
-    hide_github_button = """
+    hide_menu = """
     <style>
-    .css-1v3fvcr.e1q3nk1v0 {
+    #MainMenu {
         visibility: hidden;
     }
+    footer {
+        visibility: visible;
+    }
+    footer:after{
+        Content:"Demo for ikt_PRO. Copyright @ 2023";
+        display: block;
+        position: relative;
+        color: tomato;
     </style>
     """
-    st.markdown(hide_github_button, unsafe_allow_html=True)
+    st.markdown(hide_menu, unsafe_allow_html=True)
     
     st.title("Интегрируем")
 
