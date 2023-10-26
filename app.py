@@ -18,7 +18,7 @@ functions = {
 def main():
     hide_menu = """
     <style>
-    #header {
+    header {
         visibility: hidden;
     }
     #MainMenu {
