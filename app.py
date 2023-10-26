@@ -35,6 +35,7 @@ def main():
         padding: 5px;
         top:3px;
         color: tomato;
+        align: left;
     </style>
     """
     st.markdown(hide_menu, unsafe_allow_html=True)
