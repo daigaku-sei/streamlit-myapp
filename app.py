@@ -32,6 +32,8 @@ def main():
         Content:"Demo for ikt_PRO. Copyright @ 2023";
         display: block;
         position: relative;
+        padding: 5px;
+        top:3px;
         color: tomato;
     </style>
     """
