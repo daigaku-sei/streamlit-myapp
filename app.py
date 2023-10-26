@@ -80,5 +80,6 @@ def main():
     ax.set_ylabel("f(x)")
     ax.set_title("График функции внутри границ интегрирования")
     st.pyplot(fig)
+    st.image("toicon.png")
 if __name__ == "__main__":
     main()
