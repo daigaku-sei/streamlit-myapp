@@ -18,6 +18,9 @@ functions = {
 def main():
     hide_menu = """
     <style>
+    #GithubIcon {
+      visibility: hidden;
+    }
     #MainMenu {
         visibility: hidden;
     }
