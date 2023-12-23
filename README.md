@@ -1,2 +1,2 @@
 # streamlit-myapp
-to test the streamlit
+to test the streamlit w sympy package
